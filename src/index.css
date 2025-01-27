@@ -81,6 +81,7 @@ html
   }
 }
 
+/* 
 @layer base
 {
   *
@@ -92,4 +93,4 @@ html
   {
     @apply bg-background text-foreground;
   }
-}
+} */

@@ -1,9 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      animation: {
+        "spin-slow": "spin 30s linear infinite",
+        "counter-spin": "counter-spin 30s linear infinite",
+      },
+      keyframes: {
+        "counter-spin": {
+          from: { transform: "rotate(360deg)" },
+          to: { transform: "rotate(0deg)" },
+        },
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         robot: ["Roboto", "sans-serif"],

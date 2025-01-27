@@ -1,11 +1,17 @@
-import { Button } from "./components/ui/button";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./components/Pages/Home/HomePage";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div>
-      <h1 className="text-2xl">test</h1>
-      <Button>TEST</Button>
-    </div>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+      {/* <Footer /> */}
+    </>
   );
 };
 
