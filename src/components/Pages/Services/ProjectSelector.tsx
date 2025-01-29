@@ -14,7 +14,6 @@ import { Label } from "@/components/ui/label";
 import { SponsorshipTiers } from "./sponsorship-tires";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-// import { SponsorshipTiers } from "./sponsorship-tiers";
 
 const PROJECTS = {
   water: {

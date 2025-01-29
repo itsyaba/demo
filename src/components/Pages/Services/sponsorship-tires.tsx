@@ -17,21 +17,25 @@ const TIERS = [
     name: "Platinum",
     amount: 50000,
     benefits: ["Maximum visibility", "VIP access to events", "Recognition in all materials"],
+    bg: "#FFF",
   },
   {
     name: "Gold",
     amount: 45000,
     benefits: ["High visibility", "Priority access to events", "Recognition in major materials"],
+    bg: "#FFF",
   },
   {
     name: "Silver",
     amount: 35000,
+    bg: "#FFF",
     benefits: ["Enhanced visibility", "Event access", "Recognition in select materials"],
   },
   {
     name: "Bronze",
     amount: 25000,
     benefits: ["Standard visibility", "Event invitations", "Basic recognition"],
+    bg: "bronze",
   },
 ];
 
@@ -82,7 +86,7 @@ export function SponsorshipTiers({ selectedProject }: SponsorshipTiersProps) {
       <RadioGroup value={selectedOption} onValueChange={handleOptionChange}>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {TIERS.map((tier) => (
-            <Card key={tier.name} className="flex flex-col">
+            <Card key={tier.name} className={`${tier.name.toLocaleLowerCase()} text-black`}>
               <CardHeader>
                 <CardTitle>${tier.amount.toLocaleString()}</CardTitle>
                 <CardDescription className="text-xl font-bold">{tier.name}</CardDescription>

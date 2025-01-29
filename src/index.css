@@ -86,3 +86,28 @@ html
 {
   @apply bg-yellowC p-0.5 mr-2;
 }
+
+.black
+{
+  background-color: black;
+}
+
+.gold
+{
+  background-color: rgb(255, 215, 0);
+}
+
+.platinum
+{
+  background-color: rgb(229, 228, 226);
+}
+
+.silver
+{
+  background-color: rgb(192, 192, 192);
+}
+
+.bronze
+{
+  background-color: rgb(205, 127, 50);
+}
