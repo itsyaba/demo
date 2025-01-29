@@ -77,7 +77,7 @@ export default function ServicesSection() {
   const benefitRadius = 140;
 
   return (
-    <section className="py-20 bg-gradient-to-b from-blue-50 to-white">
+    <section className="py-20 bg-gradient-to-b from-blue-50 to-white overflow-clip">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-16 text-blue-900">Our Services</h2>
 
@@ -85,12 +85,11 @@ export default function ServicesSection() {
           {/* Decorative Circles */}
           <div className="absolute inset-0 w-full h-full">
             {/* Services Circle */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[620px] h-[620px] border-2 border-blue-200 rounded-full" />
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[620px] h-[620px] border-2 border-blueC/50 rounded-full" />
             {/* Benefits Circle */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] border-2 border-blue-300 rounded-full" />
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] border-2 border-blueC/30 rounded-full" />
           </div>
 
-          {/* Center Content */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
             <img
               src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
@@ -105,6 +104,7 @@ export default function ServicesSection() {
               const angle = (index * 360) / benefits.length;
               const x = benefitRadius * Math.cos((angle * Math.PI) / 180);
               const y = benefitRadius * Math.sin((angle * Math.PI) / 180);
+              // console.log(angle, x, y);
 
               return (
                 <div
@@ -157,7 +157,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Professional Organizer Rates Section */}
-        <div className="mt-32">
+        <div className="mt-32 w-11/12 mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16 text-blue-900">
             Benefits of Hiring a Professional Organizer
           </h2>

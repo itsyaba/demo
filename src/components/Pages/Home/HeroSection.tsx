@@ -49,7 +49,7 @@ export default function HeroSection() {
         style={{
           backgroundImage: `url(${closet})`,
         }}
-        //         I found another Image but I didn't like it so we'll stick with the old one
+        //         I found another Image but I didn't like it so we'll stick with the old one or maybe let's consider this one
         //         style={{
         //           backgroundImage:
         //             'url("https://images.unsplash.com/photo-1587874522487-fe10e954d035?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80")',
@@ -60,7 +60,6 @@ export default function HeroSection() {
       <div className="relative h-full flex items-center">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="ml-auto w-full md:w-2/3 lg:w-1/2 bg-white/20 backdrop-blur-lg rounded-lg p-8 lg:p-12 transform transition-all duration-500 ease-in-out">
-            {/* So that the height won't jump up and down we hardcode it  */}
             <div className="h-[250px] relative">
               <div
                 className={`absolute inset-0 transform transition-all duration-500 ease-in-out  flex items-start justify-between flex-col ${

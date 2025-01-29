@@ -81,16 +81,8 @@ html
   }
 }
 
-/* 
-@layer base
-{
-  *
-  {
-    @apply border-border;
-  }
 
-  body
-  {
-    @apply bg-background text-foreground;
-  }
-} */
+.line
+{
+  @apply bg-yellowC p-0.5 mr-2;
+}
