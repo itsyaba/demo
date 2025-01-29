@@ -2,62 +2,83 @@
 
 import { useState } from "react";
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 import { SponsorshipTiers } from "./sponsorship-tires";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+// import { SponsorshipTiers } from "./sponsorship-tiers";
 
 const PROJECTS = {
   water: {
     title: "Clean Drinking Water",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem at quidem quam ratione optio. Iste dolorem voluptas ex accusantium ipsam illo exercitationem alias libero, harum error aliquam nihil vitae aut fuga! Quisquam optio modi itaque deserunt, aliquam alias nisi. Dolores reprehenderit ut culpa, eligendi animi sit accusantium perspiciatis. Asperiores, maiores..",
+      "Our mission is to provide clean, safe drinking water to every member of our community. Through sustainable infrastructure and modern purification systems, we're working to ensure that clean water is not a privilege, but a right for all residents.",
+    image: "/placeholder.svg?height=300&width=600",
   },
   hospital: {
     title: "Dikome Balue Hospital Rebuild",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt qui pariatur blanditiis, dolorem natus deserunt odio libero, perspiciatis similique, quos voluptatibus harum illo ea minima esse possimus eos rem? Nostrum quisquam possimus optio praesentium dolorum! Distinctio doloremque dolores, tempora dolorum unde, odit praesentium quibusdam, inventore rerum deleniti incidunt ipsum consectetur expedita quis ea numquam cupiditate possimus? Voluptatum, optio fugit?",
+      "The rebuilding of Dikome Balue hospital is crucial for providing essential healthcare services to our community. This project aims to create a modern medical facility equipped with necessary resources to serve our growing population.",
+    image: "/placeholder.svg?height=300&width=600",
   },
 };
 
 export function ProjectSelector() {
-  const [selectedProject, setSelectedProject] = useState<string>("");
+  const [selectedProject, setSelectedProject] = useState<string | null>(null);
+
+  const handleProjectChange = (project: string) => {
+    setSelectedProject(project === selectedProject ? null : project);
+  };
 
   return (
     <div className="space-y-8">
-      <div className="space-y-4">
-        <h2 className="text-2xl font-bold text-center">Select a Project to Support</h2>
-        <Select onValueChange={setSelectedProject} value={selectedProject}>
-          <SelectTrigger className="w-full max-w-md mx-auto">
-            <SelectValue placeholder="Choose a project" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="water">Clean Drinking Water</SelectItem>
-            <SelectItem value="hospital">Dikome Balue Hospital Rebuild</SelectItem>
-          </SelectContent>
-        </Select>
+      <div>
+        <h2 className="text-2xl font-bold text-center mb-4">Select a Project to Support</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {Object.entries(PROJECTS).map(([key, project]) => (
+            <Card
+              key={key}
+              className={`cursor-pointer transition-shadow hover:shadow-md ${
+                selectedProject === key ? "ring-2 ring-primary" : ""
+              }`}
+            >
+              <CardHeader className="pb-2">
+                <div className="flex items-center space-x-2">
+                  <Checkbox
+                    id={`project-${key}`}
+                    checked={selectedProject === key}
+                    onCheckedChange={() => handleProjectChange(key)}
+                  />
+                  <Label htmlFor={`project-${key}`}>
+                    <CardTitle>{project.title}</CardTitle>
+                  </Label>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>{project.description}</CardDescription>
+              </CardContent>
+              <CardFooter>
+                <Link to="/donate">
+                  <Button className="bg-green-600 hover:bg-green-300">See More</Button>
+                </Link>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
       </div>
 
       {selectedProject && (
-        <div className="space-y-8">
-          <Card>
-            <CardHeader>
-              <CardTitle>{PROJECTS[selectedProject as keyof typeof PROJECTS].title}</CardTitle>
-              <CardDescription>
-                {PROJECTS[selectedProject as keyof typeof PROJECTS].description}
-              </CardDescription>
-            </CardHeader>
-            <CardContent></CardContent>
-          </Card>
-
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold text-center">Choose Your Sponsorship Level</h3>
-            <SponsorshipTiers selectedProject={selectedProject} />
-          </div>
+        <div className="space-y-4">
+          <h3 className="text-xl font-bold text-center">Choose Your Sponsorship Level</h3>
+          <SponsorshipTiers selectedProject={selectedProject} />
         </div>
       )}
     </div>
