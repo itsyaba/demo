@@ -23,6 +23,7 @@ export const InfiniteMovingCards = ({
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollerRef = useRef<HTMLUListElement>(null);
+
   const [start, setStart] = useState(false);
 
   useEffect(() => {
@@ -73,7 +74,7 @@ export const InfiniteMovingCards = ({
       ref={containerRef}
       className={cn("scroller relative z-20 w-11/12 overflow-hidden h-fit", className)}
     >
-      <div
+      <ul
         ref={scrollerRef}
         className={cn(
           " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap  h-full",
@@ -81,7 +82,7 @@ export const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {items.map((item, idx) => (
+        {items.map((item) => (
           <Card
             className="w-[90vw] md:w-[450px]  relative rounded-2xl border border-b-0  border-slate-700 px-4 md:px-3 py-4  bg-textColor h-[50vh] md:h-[45vh] flex flex-col items-start justify-between"
             key={item.name}
@@ -105,7 +106,7 @@ export const InfiniteMovingCards = ({
             </CardFooter>
           </Card>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };
