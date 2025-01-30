@@ -1,5 +1,6 @@
 import AboutSection from "./AboutSection";
 import CallToActionSection from "./CallToActionSection";
+import ContactSection from "./ContactSection";
 import HeroSection from "./HeroSection";
 import ProjectSection from "./ProjectSection";
 import ServiceSection from "./ServiceSection";
@@ -14,6 +15,7 @@ const HomePage = () => {
       <TestimonialSection />
       <CallToActionSection />
       <ProjectSection />
+      <ContactSection />
     </>
   );
 };

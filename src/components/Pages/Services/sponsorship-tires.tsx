@@ -89,7 +89,9 @@ export function SponsorshipTiers({ selectedProject }: SponsorshipTiersProps) {
             <Card key={tier.name} className={`${tier.name.toLocaleLowerCase()} text-black`}>
               <CardHeader>
                 <CardTitle>${tier.amount.toLocaleString()}</CardTitle>
-                <CardDescription className="text-xl font-bold">{tier.name}</CardDescription>
+                <CardDescription className="text-xl font-bold text-white">
+                  {tier.name}
+                </CardDescription>
               </CardHeader>
               <CardFooter>
                 <div className="flex items-center space-x-2">

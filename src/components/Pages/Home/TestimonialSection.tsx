@@ -42,13 +42,17 @@ const TestimonialSection = () => {
 
   return (
     <section
-      className="h-[60rem] flex flex-col antialiased bg-  items-center justify-center relative overflow-hidden bg-gradient-to-b from-blue-50 to-white"
+      className="h-fit flex flex-col antialiased bg-  items-center justify-center relative overflow-hidden bg-gradient-to-b from-blue-50 to-white py-12"
       id="testimonials"
     >
-      <h2 className="text-4xl font-bold text-center mb-10 text-blue-900">Testimonials</h2>
-
-      <InfiniteMovingCards items={testimonials} direction="right" speed="slow" />
-      <InfiniteMovingCards items={testimonials} direction="left" speed="slow" />
+      <div className="text-xs uppercase tracking-wider text-muted-foreground mb-2 font-railway">
+        Hear What Our Clients Are Saying
+      </div>
+      <h2 className="text-5xl font-bold text-center mb-10 text-blue-900 ">Testimonials</h2>
+      <div className="flex items-center justify-center flex-col w-11/12">
+        <InfiniteMovingCards items={testimonials} direction="right" speed="slow" />
+        <InfiniteMovingCards items={testimonials} direction="left" speed="slow" />
+      </div>
     </section>
   );
 };

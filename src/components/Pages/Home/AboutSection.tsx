@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import closet from "@/assets/closet-2.jpg";
 import womenImage from "@/assets/14.jpg";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Phone, Play, PlayIcon } from "lucide-react";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 export default function AboutSection() {
   const processSteps = [
@@ -34,7 +35,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="container mx-auto px-4 py-16 max-w-10/12">
+    <section className="container mx-auto px-4 py-16 max-w-10/12" id="about">
       <div className="flex items-center justify-between flex-col md:flex-row w-11/12 mx-auto  gap-10 md:gap-4">
         <div className="relative  mx-auto container flex items-center justify-center ">
           <div className="relative w-3/6">
@@ -84,13 +85,44 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
-      <div className="mt-16 text-center space-y-6">
+      <div className="my-24 text-center space-y-6 ">
         <h3 className="text-2xl font-semibold text-gray-800">
-          Getting Organized Is Just A Click Away
+          Getting Organized Is Just A Click Away.
         </h3>
         <Button className="bg-[#E3C1C1] hover:bg-[#d4b1b1] text-black px-8 py-6 text-lg">
           Take Action Today
         </Button>
+      </div>
+      <div className="mt-16 grid gap-6 w-11/12 mx-auto md:grid-cols-2 lg:grid-cols-3" id="faq">
+        <Card>
+          <CardHeader className="font-poppins font-semibold border-b mb-5">
+            <div className="flex items-center gap-1">
+              <PlayIcon />
+              <span>Give us your space:</span>
+            </div>
+          </CardHeader>
+          <CardContent>We strategize and come up with the best plan</CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="font-poppins font-semibold border-b mb-5">
+            <div className="flex items-center gap-1">
+              <Phone />
+              <span>We do our magic:</span>
+            </div>
+          </CardHeader>
+          <CardContent>We get in and get the work done</CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="font-poppins font-semibold border-b mb-5">
+            <div className="flex items-center gap-1">
+              <PlayIcon />
+              <span>The unveiling:</span>
+            </div>
+          </CardHeader>
+          <CardContent>We put smiles on your face and make life easier</CardContent>
+        </Card>
       </div>
     </section>
   );

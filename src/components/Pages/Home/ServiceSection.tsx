@@ -1,29 +1,30 @@
 import React from "react";
 import { Home, Box, Clock, DollarSign, Smile, Brain, Users, Briefcase } from "lucide-react";
+import { IconBabyCarriage, IconCookie, IconHanger, IconHomeEdit, IconSettingsCode, IconSettingsDown, IconToolsKitchen3, IconWashMachine } from "@tabler/icons-react";
 
 const services = [
   {
     id: 1,
     title: "Laundry Room Organization",
-    icon: <Box className="w-6 h-6" />,
+    icon: <IconWashMachine className="w-6 h-6" />,
     color: "bg-blue-600",
   },
   {
     id: 2,
     title: "Closet Organizer",
-    icon: <Box className="w-6 h-6" />,
+    icon: <IconHanger className="w-6 h-6" />,
     color: "bg-blue-500",
   },
   {
     id: 3,
     title: "Kitchen Organizer",
-    icon: <Box className="w-6 h-6" />,
+    icon: <IconToolsKitchen3 className="w-6 h-6" />,
     color: "bg-blue-600",
   },
   {
     id: 4,
     title: "Pantry Organizer",
-    icon: <Box className="w-6 h-6" />,
+    icon: <IconCookie className="w-6 h-6" />,
     color: "bg-blue-500",
   },
   {
@@ -35,7 +36,7 @@ const services = [
   {
     id: 6,
     title: "Children's Room Organization",
-    icon: <Home className="w-6 h-6" />,
+    icon: <IconBabyCarriage className="w-6 h-6" />,
     color: "bg-blue-500",
   },
   {
@@ -47,19 +48,19 @@ const services = [
   {
     id: 8,
     title: "Downsizing Home",
-    icon: <Home className="w-6 h-6" />,
+    icon: <IconSettingsDown className="w-6 h-6" />,
     color: "bg-blue-500",
   },
   {
     id: 9,
     title: "Decluttering House For The Sale",
-    icon: <Home className="w-6 h-6" />,
+    icon: <IconSettingsCode className="w-6 h-6" />,
     color: "bg-blue-600",
   },
   {
     id: 10,
     title: "Organizing After a House Move",
-    icon: <Box className="w-6 h-6" />,
+    icon: <IconHomeEdit className="w-6 h-6" />,
     color: "bg-blue-500",
   },
 ];
@@ -161,7 +162,7 @@ export default function ServicesSection() {
           <h2 className="text-4xl font-bold text-center mb-16 text-blue-900">
             Benefits of Hiring a Professional Organizer
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {benefits.map((benefit) => (
               <div
                 key={benefit.id}

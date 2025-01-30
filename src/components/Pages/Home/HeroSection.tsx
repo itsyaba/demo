@@ -46,14 +46,14 @@ export default function HeroSection() {
     <div className="relative h-screen w-full overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url(${closet})`,
-        }}
+        // style={{
+        //   backgroundImage: `url(${closet})`,
+        // }}
         //         I found another Image but I didn't like it so we'll stick with the old one or maybe let's consider this one
-        //         style={{
-        //           backgroundImage:
-        //             'url("https://images.unsplash.com/photo-1587874522487-fe10e954d035?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80")',
-        //         }}
+        style={{
+          backgroundImage:
+            'url("https://images.unsplash.com/photo-1540221652346-e5dd6b50f3e7?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+        }}
       >
         <div className="absolute inset-0 bg-black/40"></div>
       </div>

@@ -7,12 +7,12 @@ import Services from "./components/Pages/Services/Services";
 const App = () => {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/donate" element={<Services />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

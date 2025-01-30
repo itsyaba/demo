@@ -7,12 +7,12 @@ export default function Footer() {
   const footerLinks = [
     "Home",
     "About",
-    "Blog",
-    "Contact Us",
     "Services",
-    "Gallery",
+    "Contact",
+    "Services",
+    "Projects",
     "FAQ",
-    "Reviews",
+    "Testimonials",
   ];
 
   return (
@@ -57,7 +57,7 @@ export default function Footer() {
               {footerLinks.map((link) => (
                 <li key={link}>
                   <Link
-                    to="#"
+                    to={`#${link.toLowerCase()}`}
                     className="text-sm hover:text-yellowC transition-colors flex items-center gap-2 "
                   >
                     <span className="text-yellowC">››</span> {link}
