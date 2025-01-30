@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import closet from "../../../assets/closet.jpg";
+// import closet from "../../../assets/closet.jpg";
 
 const contents = [
   {

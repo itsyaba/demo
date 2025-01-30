@@ -1,5 +1,5 @@
 import React from "react";
-import { Home, Box, Clock, DollarSign, Smile, Brain, Users, Briefcase } from "lucide-react";
+import { Box, Clock, DollarSign, Smile, Brain, Users, Briefcase } from "lucide-react";
 import { IconBabyCarriage, IconCookie, IconHanger, IconHomeEdit, IconSettingsCode, IconSettingsDown, IconToolsKitchen3, IconWashMachine } from "@tabler/icons-react";
 
 const services = [

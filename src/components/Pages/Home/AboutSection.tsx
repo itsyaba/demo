@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import closet from "@/assets/closet-2.jpg";
 import womenImage from "@/assets/14.jpg";
-import { CheckCircle2, Phone, Play, PlayIcon } from "lucide-react";
+import { CheckCircle2, Phone, PlayIcon } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 export default function AboutSection() {
