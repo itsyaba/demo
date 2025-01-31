@@ -22,19 +22,19 @@ export default function ServicesSection() {
       id: 1,
       title: "Laundry Room Organization",
       icon: <IconWashMachine className="w-10 h-10" />,
-      color: "bg-logoBg",
+      color: "bg-yellowC",
     },
     {
       id: 2,
       title: "Closet Organizer",
       icon: <IconHanger className="w-10 h-10" />,
-      color: "bg-textColor",
+      color: "bg-yellowC",
     },
     {
       id: 3,
       title: "Kitchen Organizer",
       icon: <IconToolsKitchen3 className="w-10 h-10" />,
-      color: "bg-logoBg",
+      color: "bg-yellowC",
     },
     {
       id: 4,
@@ -46,37 +46,37 @@ export default function ServicesSection() {
       id: 5,
       title: "Home Office Organizing",
       icon: <Briefcase className="w-10 h-10" />,
-      color: "bg-logoBg",
+      color: "bg-yellowC",
     },
     {
       id: 6,
       title: "Children's Room Organization",
       icon: <IconBabyCarriage className="w-10 h-10" />,
-      color: "bg-blue-500",
+      color: "bg-yellowC",
     },
     {
       id: 7,
       title: "Downsizing Storage",
       icon: <IconDevicesDown className="w-10 h-10" />,
-      color: "bg-logoBg",
+      color: "bg-yellowC",
     },
     {
       id: 8,
       title: "Downsizing Home",
       icon: <IconSettingsDown className="w-10 h-10" />,
-      color: "bg-blue-500",
+      color: "bg-yellowC",
     },
     {
       id: 9,
       title: "Decluttering House For The Sale",
       icon: <IconSettingsCode className="w-10 h-10" />,
-      color: "bg-logoBg",
+      color: "bg-yellowC",
     },
     {
       id: 10,
       title: "Organizing After a House Move",
       icon: <IconHomeEdit className="w-10 h-10" />,
-      color: "bg-blue-500",
+      color: "bg-yellowC",
     },
   ];
 
@@ -118,13 +118,13 @@ export default function ServicesSection() {
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-16 text-blue-900">Our Services</h2>
 
-        <div className="relative w-[600px] h-[600px] mx-auto">
+        <div className="relative w-[800px] h-[800px] mx-auto">
           {/* Services Circle */}
           <div className="absolute inset-0 border-2 border-blue-200 rounded-full animate-spin-slow">
             {services.map((service, index) => {
               const angle = (index * 360) / services.length;
-              const x = 300 * Math.cos((angle * Math.PI) / 180);
-              const y = 300 * Math.sin((angle * Math.PI) / 180);
+              const x = 400 * Math.cos((angle * Math.PI) / 180);
+              const y = 400 * Math.sin((angle * Math.PI) / 180);
 
               return (
                 <div
@@ -149,32 +149,33 @@ export default function ServicesSection() {
           </div>
 
           {/* Benefits Circle */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] border-2 border-blue-300 rounded-full animate-spin-reverse">
-            {benefits.map((benefit, index) => {
-              const angle = (index * 360) / benefits.length;
-              const x = 150 * Math.cos((angle * Math.PI) / 180);
-              const y = 150 * Math.sin((angle * Math.PI) / 180);
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border-2 border-blue-300 rounded-full  ">
+            <div className="animate-spin-reverse absolute top-1/2 left-1/2">
+              {benefits.map((benefit, index) => {
+                const angle = (index * 360) / benefits.length;
+                const x = 200 * Math.cos((angle * Math.PI) / 180);
+                const y = 200 * Math.sin((angle * Math.PI) / 180);
 
-              return (
-                <div
-                  key={benefit.id}
-                  className="absolute w-20 h-20 -mt-10 -ml-10 animate-maintain-reverse"
-                  style={{
-                    left: `calc(50% + ${x}px)`,
-                    top: `calc(50% + ${y}px)`,
-                  }}
-                >
-                  <div className="w-full h-full rounded-full bg-white flex flex-col items-center justify-center shadow-md">
-                    <div className="text-blue-500 mb-1">{benefit.icon}</div>
-                    <p className="text-[10px] text-center font-medium text-blue-900">
+                return (
+                  <div
+                    key={benefit.id}
+                    className="absolute w-20 h-20 -mt-10 -ml-10 animate-maintain-reverse "
+                    style={{
+                      left: `calc(50% + ${x}px)`,
+                      top: `calc(50% + ${y}px)`,
+                    }}
+                  >
+                    <div className="w-full h-full rounded-full bg-yellowC flex flex-col items-center justify-center shadow-md">
+                      <div className="text-blue-500 mb-0.5">{benefit.icon}</div>
+                    </div>
+                    <p className=" text-center font-medium text-blue-900 text-sm">
                       {benefit.title}
                     </p>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
-
           {/* Central Image */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-28 h-28 z-10">
             <img
