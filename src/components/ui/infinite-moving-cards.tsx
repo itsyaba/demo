@@ -84,7 +84,10 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item) => (
           <Card
-            className="w-[90vw] md:w-[450px]  relative rounded-2xl border border-b-0  border-slate-700 px-4 md:px-3 py-4  bg-textColor h-[50vh] md:h-[45vh] flex flex-col items-start justify-between"
+            className="w-[90vw] md:w-[450px]  relative rounded-2xl border border-b-0  border-slate-700 px-4 md:px-3 py-4  h-[50vh] md:h-[45vh] flex flex-col items-start justify-between"
+            style={{
+              background: "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
+            }}
             key={item.name}
           >
             <CardContent className=" h-10/12">
