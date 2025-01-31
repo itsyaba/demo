@@ -7,6 +7,9 @@ export default {
     extend: {
       animation: {
         "spin-slow": "spin 30s linear infinite",
+        maintain: "maintain 30s linear infinite",
+        "spin-reverse": "rotate 30s linear infinite reverse",
+        "maintain-reverse": "maintain 30s linear infinite reverse",
         "counter-spin": "counter-spin 30s linear infinite",
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
@@ -14,12 +17,20 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       keyframes: {
+        rotate: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        maintain: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(-360deg)" },
+        },
         "counter-spin": {
           from: {
-            transform: "rotate(360deg)",
+            transform: "rotate(0deg)",
           },
           to: {
-            transform: "rotate(0deg)",
+            transform: "rotate(-360deg)",
           },
         },
         scroll: {

@@ -4,10 +4,10 @@ import { Compare } from "@/components/ui/compare";
 
 const categories = [
   { id: "all", label: "ALL" },
-  { id: "landing", label: "Landing /Entrance way" },
   { id: "closets", label: "Closets and Garages" },
   { id: "food", label: "Food Pantry and Kitchen area" },
   { id: "work", label: "Work Area and Play Area" },
+  { id: "landing", label: "Landing /Entrance way" },
 ];
 
 const projects = [

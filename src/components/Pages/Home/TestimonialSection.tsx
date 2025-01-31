@@ -50,8 +50,8 @@ const TestimonialSection = () => {
       </div>
       <h2 className="text-5xl font-bold text-center mb-10 text-blue-900 ">Testimonials</h2>
       <div className="flex items-center justify-center flex-col w-11/12">
-        <InfiniteMovingCards items={testimonials} direction="right" speed="slow" />
-        <InfiniteMovingCards items={testimonials} direction="left" speed="slow" />
+        <InfiniteMovingCards items={testimonials} direction="right" speed="slow" className="" />
+        {/* <InfiniteMovingCards items={testimonials} direction="left" speed="slow" /> */}
       </div>
     </section>
   );

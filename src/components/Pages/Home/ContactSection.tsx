@@ -167,19 +167,19 @@ export default function ContactSection() {
             </div>
 
             <div className="mt-8">
-              <h3 className="text-xl font-semibold mb-6">
+              <h3 className="text-2xl font-bold mb-4">
                 <span className="line"> </span>
                 Work Days
               </h3>
               <div className="space-y-2">
-                <div className="flex justify-between">
-                  <span className="text-sm">Mon - sat</span>
-                  <span className="text-sm ">09am - 05pm</span>
+                <div className="flex justify-between text-gray-600">
+                  <span className="text-md">Mon - sat</span>
+                  <span className="text-md ">09am - 05pm</span>
                 </div>
                 <hr className="my-4 bg-gray-600" />
                 <div className="flex justify-between">
-                  <span className="text-sm">Sunday</span>
-                  <span className="text-sm text-yellowC">Closed</span>
+                  <span className="text-md">Sunday</span>
+                  <span className="text-md text-yellowC font-semibold">Closed</span>
                 </div>
               </div>
             </div>
