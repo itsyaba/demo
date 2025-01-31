@@ -132,7 +132,7 @@ export default function ServicesSection() {
                 return (
                   <div
                     key={service.id}
-                    className="absolute w-10 h-10 -mt-6 -ml-5 sm:w-15 sm:h-15 sm:-mt-10 sm:-ml-10 lg:w-28 lg:h-28 lg:-mt-14 lg:-ml-14 animate-maintain"
+                    className="absolute w-10 h-10 -mt-6 -ml-5 md:w-15 md:h-15 md:-mt-10 md:-ml-10 lg:w-28 lg:h-28 lg:-mt-14 lg:-ml-14 animate-maintain"
                     style={{
                       left: `calc(50% + ${x}px)`,
                       top: `calc(50% + ${y}px)`,
@@ -193,10 +193,10 @@ export default function ServicesSection() {
 
         {/* Professional Organizer Benefits Section */}
         <div className="mt-32 w-11/12 mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-blue-900">
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-16 text-blue-900">
             Benefits of Hiring a Professional Organizer
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {benefits.map((benefit) => (
               <div
                 key={benefit.id}
