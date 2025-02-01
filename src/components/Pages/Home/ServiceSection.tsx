@@ -15,7 +15,8 @@ import MoneyGif from "../../../assets/money.gif";
 import ClarityGif from "../../../assets/clarity.gif";
 import SocialGif from "../../../assets/social.gif";
 import StressGif from "../../../assets/stress.gif";
-
+// I'm not being racist
+import black_women from "../../../assets/black_women.jpg";
 export default function ServicesSection() {
   const services = [
     {
@@ -120,7 +121,7 @@ export default function ServicesSection() {
           Our Services
         </h2>
         <div className="h-[40vh] md:h-full">
-          <div className="relative w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] lg:w-[800px] lg:h-[800px] mx-auto  ">
+          <div className="relative w-[350px] h-[350px] md:w-[450px] md:h-[450px] lg:w-[800px] lg:h-[800px] mx-auto  ">
             {/* Services Circle */}
             <div className="absolute inset-0 border-2 border-blue-900 rounded-full animate-spin-slow  ">
               {services.map((service, index) => {
@@ -183,9 +184,9 @@ export default function ServicesSection() {
             {/* Central Image */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 lg:w-28 lg:h-28 z-10">
               <img
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+                src={black_women}
                 alt="Professional Organizer"
-                className="w-full h-full rounded-full object-cover border-4 border-white shadow-lg"
+                className="w-full h-full rounded-full object-top border-4 border-white shadow-2xl "
               />
             </div>
           </div>

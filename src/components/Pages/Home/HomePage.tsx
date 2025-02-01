@@ -14,7 +14,7 @@ const HomePage = () => {
       <AboutSection />
       <TestimonialSection />
       <CallToActionSection />
-      <ProjectSection />
+      {/* <ProjectSection /> */}
       <ContactSection />
     </>
   );
