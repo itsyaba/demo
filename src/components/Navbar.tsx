@@ -8,8 +8,8 @@ const navLinks = [
   { name: "SERVICES", href: "#services", position: "left" },
   { name: "PROJECTS", href: "#projects", position: "left" },
   { name: "TESTIMONIALS", href: "#testimonials", position: "right" },
-  { name: "FAQ", href: "#faq", position: "right" },
-  { name: "CONTACT", href: "#contact-us", position: "right" },
+  { name: "FAQ", href: "#testimonials", position: "right" },
+  { name: "CONTACT", href: "#contact", position: "right" },
 ];
 
 export default function Navbar() {
@@ -17,8 +17,6 @@ export default function Navbar() {
 
   const leftLinks = navLinks.filter((link) => link.position === "left");
   const rightLinks = navLinks.filter((link) => link.position === "right");
-
-  // TODO: noting much but for the mobile nav lets consider shadcn ui sheet
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-md font-railway">

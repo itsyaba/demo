@@ -36,25 +36,23 @@ export default function HeroSection() {
   }, []);
 
   const currentContent = contents[currentIndex];
+  const lowResImage =
+    "https://images.unsplash.com/photo-1540221652346-e5dd6b50f3e7?q=10&w=50&auto=format&fit=crop";
+  const fullResImage =
+    "https://images.unsplash.com/photo-1540221652346-e5dd6b50f3e7?q=80&w=1500&auto=format&fit=crop";
 
-  //TODO: Functional Get Started Button
-  //TODO: Find a better BG Image
-  //TODO: Simple tweaks here and there
-  //TODO: LEFT OR RIGHT it should not be that hard of a question
+  const [loaded, setLoaded] = useState(false);
 
   return (
     <div className="relative h-screen w-full overflow-hidden">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        // style={{
-        //   backgroundImage: `url(${closet})`,
-        // }}
-        //         I found another Image but I didn't like it so we'll stick with the old one or maybe let's consider this one
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700 ease-in-out"
         style={{
-          backgroundImage:
-            'url("https://images.unsplash.com/photo-1540221652346-e5dd6b50f3e7?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+          backgroundImage: `url(${loaded ? fullResImage : lowResImage})`,
+          filter: loaded ? "none" : "blur(10px)",
         }}
       >
+        <img src={fullResImage} className="hidden" onLoad={() => setLoaded(true)} alt="Preload" />
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
       <div className="relative h-full flex items-center">

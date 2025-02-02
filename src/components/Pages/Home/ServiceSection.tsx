@@ -10,11 +10,11 @@ import {
   IconToolsKitchen3,
   IconWashMachine,
 } from "@tabler/icons-react";
-import ClockGif from "../../../assets/clock.gif";
-import MoneyGif from "../../../assets/money.gif";
-import ClarityGif from "../../../assets/clarity.gif";
-import SocialGif from "../../../assets/social.gif";
-import StressGif from "../../../assets/stress.gif";
+import ClockGif from "../../../assets/clock (2).gif";
+import MoneyGif from "../../../assets/money (2).gif";
+import ClarityGif from "../../../assets/clarity (2).gif";
+import SocialGif from "../../../assets/social (2).gif";
+import StressGif from "../../../assets/stress (2).gif";
 // I'm not being racist
 import black_women from "../../../assets/black_women.jpg";
 export default function ServicesSection() {

@@ -1,5 +1,6 @@
 import closet from "@/assets/closet-2.jpg";
-import womenImage from "@/assets/14.jpg";
+// import womenImage from "@/assets/14.jpg";
+import womenImage from "@/assets/black_women.jpg";
 import { CheckCircle2 } from "lucide-react";
 
 export default function AboutSection() {
@@ -40,7 +41,7 @@ export default function AboutSection() {
                 alt="Professional organizer"
                 width={300}
                 height={300}
-                className="rounded-lg"
+                className="rounded-lg shadow-2xl "
               />
             </div>
           </div>
