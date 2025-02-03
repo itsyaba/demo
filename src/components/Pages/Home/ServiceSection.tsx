@@ -185,16 +185,13 @@ export default function ServicesSection() {
 
             {/* Central Image */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-28 h-28 sm:w-20 sm:h-20 lg:w-44 lg:h-44 z-10 ">
-              <div className=" absolute -top-14 -skew-y-12 rounded-lg text-center left-0 right-0 bg-white shadow-2xl p-2 ">
-                {/* <Button
-                  borderRadius="0.2rem"
-                  className="text-xs md:text-base lg:text-md flex flex-col items-center  bg-white text-black shadow-2xl border-none font-poppins py-8 "
-                  as="div"
-                  duration={6500}
-                >
-                  <span className="block font-extrabold ">10+</span>
+              <div className="lg:hidden absolute -bottom-12  -skew-y-12 rounded-lg text-center left-0 right-0 bg-white shadow-2xl p-2 ">
+                <h2 className="text-xs md:text-base  whitespace-wrap skew-y-0">
+                  <span className="block font-extrabold text-lg">10+</span>
                   services we provide
-                </Button> */}
+                </h2>
+              </div>
+              <div className="hidden lg:block absolute -top-14  -skew-y-12 rounded-lg text-center left-0 right-0 bg-white shadow-2xl p-2 ">
                 <h2 className="text-xs md:text-base  whitespace-wrap skew-y-0">
                   <span className="block font-extrabold text-lg">10+</span>
                   services we provide
