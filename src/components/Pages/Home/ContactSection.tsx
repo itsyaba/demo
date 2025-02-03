@@ -158,7 +158,7 @@ export default function ContactSection() {
               </h3>
               <div className="flex items-start space-x-3 text-gray-600">
                 <PhoneCall className="h-5 w-5 mt-1 text-[#F47458]" />
-                <p>667-770-7076</p>
+                <p> 443-695-7696</p>
               </div>
               <div className="flex items-start space-x-3 text-gray-600 mt-2">
                 <Mail className="h-5 w-5 mt-1 text-[#F47458]" />
@@ -174,7 +174,7 @@ export default function ContactSection() {
               <div className="space-y-2">
                 <div className="flex justify-between text-gray-600">
                   <span className="text-md">Mon - sat</span>
-                  <span className="text-md ">09am - 05pm</span>
+                  <span className="text-md uppercase">09am - 03pm</span>
                 </div>
                 <hr className="my-4 bg-gray-600" />
                 <div className="flex justify-between">

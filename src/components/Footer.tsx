@@ -4,16 +4,7 @@ import Logo from "@/assets/logo.jpg";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
-  const footerLinks = [
-    "Home",
-    "About",
-    "Services",
-    "Contact",
-    "Services",
-    "Projects",
-    "FAQ",
-    "Testimonials",
-  ];
+  const footerLinks = ["Home", "About", "Contact", "Services", "Projects", "FAQ", "Testimonials"];
 
   return (
     <footer className="bg-blueC text-white pt-16 pb-8 font-poppins">
@@ -37,7 +28,7 @@ export default function Footer() {
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span className="text-sm">Mon - sat</span>
-                  <span className="text-sm ">09am - 05pm</span>
+                  <span className="text-sm uppercase">09am - 03pm</span>
                 </div>
                 <hr className="my-4 bg-gray-600" />
                 <div className="flex justify-between">
@@ -56,12 +47,12 @@ export default function Footer() {
             <ul className=" grid grid-cols-2 place-content-center gap-4">
               {footerLinks.map((link) => (
                 <li key={link}>
-                  <Link
-                    to={`#${link.toLowerCase()}`}
+                  <a
+                    href={`#${link.toLowerCase()}`}
                     className="text-sm hover:text-yellowC transition-colors flex items-center gap-2 "
                   >
                     <span className="text-yellowC">››</span> {link}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -73,7 +64,7 @@ export default function Footer() {
               Get Free Estimate
             </h3>
             <div className="space-y-4">
-              <p className="text-2xl font-bold text-yellowC">667-770-7076</p>
+              <p className="text-2xl font-bold text-yellowC"> 443-695-7696</p>
               <p className="text-sm">Our online scheduling and payment system is safe.</p>
               <Button className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 transition-all">
                 REQUEST WITH AN ONLINE FORM
@@ -93,7 +84,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-yellowC" />
-                <p className="text-sm">Phone : 667-770-7076</p>
+                <p className="text-sm">Phone : 443-695-7696</p>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-yellowC" />

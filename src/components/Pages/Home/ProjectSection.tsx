@@ -87,7 +87,7 @@ const ProjectSection = () => {
       : projects.filter((project) => project.category === activeCategory);
 
   return (
-    <div>
+    <div id="projects">
       <div className="container mx-auto px-4 py-10 max-w-11/12">
         <div className="text-center mb-12">
           <div className="text-sm uppercase tracking-wider text-muted-foreground mb-2 font-railway">

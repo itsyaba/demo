@@ -17,6 +17,7 @@ import SocialGif from "../../../assets/social (2).gif";
 import StressGif from "../../../assets/stress (2).gif";
 // I'm not being racist
 import black_women from "../../../assets/black_women.jpg";
+import { Button } from "@/components/ui/moving-border";
 export default function ServicesSection() {
   const services = [
     {
@@ -121,12 +122,12 @@ export default function ServicesSection() {
           Our Services
         </h2>
         <div className="h-[40vh] md:h-full">
-          <div className="relative w-[350px] h-[350px] md:w-[450px] md:h-[450px] lg:w-[800px] lg:h-[800px] mx-auto  ">
+          <div className="relative w-[350px] h-[350px] md:w-[450px] md:h-[450px] lg:w-[600px] lg:h-[600px] mx-auto  ">
             {/* Services Circle */}
             <div className="absolute inset-0 border-2 border-blue-900 rounded-full animate-spin-slow  ">
               {services.map((service, index) => {
                 const angle = (index * 360) / services.length;
-                const radius = window.innerWidth < 640 ? 170 : window.innerWidth < 1024 ? 225 : 400;
+                const radius = window.innerWidth < 640 ? 175 : window.innerWidth < 1024 ? 225 : 300;
                 const x = radius * Math.cos((angle * Math.PI) / 180);
                 const y = radius * Math.sin((angle * Math.PI) / 180);
 
@@ -153,7 +154,7 @@ export default function ServicesSection() {
             </div>
 
             {/* Benefits Circle */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[160px] h-[160px] sm:w-[160px] sm:h-[160px] lg:w-[400px] lg:h-[400px] border-2 border-blue-300 rounded-full">
+            {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[160px] h-[160px] sm:w-[160px] sm:h-[160px] lg:w-[400px] lg:h-[400px] border-2 border-blue-300 rounded-full">
               <div className="animate-spin-reverse absolute top-1/2 left-1/2">
                 {benefits.map((benefit, index) => {
                   const angle = (index * 360) / benefits.length;
@@ -180,9 +181,25 @@ export default function ServicesSection() {
                   );
                 })}
               </div>
-            </div>
+            </div> */}
+
             {/* Central Image */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 lg:w-28 lg:h-28 z-10">
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-28 h-28 sm:w-20 sm:h-20 lg:w-44 lg:h-44 z-10 ">
+              <div className=" absolute -top-12 rounded-lg text-center left-0 right-0 lg:-right-4 lg:-left-4">
+                <Button
+                  borderRadius="0.2rem"
+                  className="text-xs md:text-base lg:text-md py-2  flex flex-col items-center  bg-white text-black shadow-2xl border-none font-poppins "
+                >
+                  <span className="block font-extrabold">10+</span>
+                  services we provide
+                </Button>
+              </div>
+              {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-900 text-white px-6 py-1  rounded-lg z-20 w-1/2">
+                <p className="text-sm sm:text-base lg:text-lg font-semibold whitespace-wrap text-center ">
+                  <span className="block">10+</span>
+                  Service we provide
+                </p>
+              </div> */}
               <img
                 src={black_women}
                 alt="Professional Organizer"

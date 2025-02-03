@@ -4,11 +4,11 @@ import Logo from "../assets/logo.jpg";
 import { Link } from "react-router-dom";
 
 const navLinks = [
-  { name: "ABOUT", href: "#about", position: "left" },
+  { name: "HOME", href: "#home", position: "left" },
   { name: "SERVICES", href: "#services", position: "left" },
-  { name: "PROJECTS", href: "#projects", position: "left" },
+  { name: "ABOUT", href: "#about", position: "left" },
   { name: "TESTIMONIALS", href: "#testimonials", position: "right" },
-  { name: "FAQ", href: "#testimonials", position: "right" },
+  { name: "PROJECTS", href: "#projects", position: "right" },
   { name: "CONTACT", href: "#contact", position: "right" },
 ];
 
@@ -24,13 +24,13 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           <div className="hidden md:flex items-center space-x-8">
             {leftLinks.map((link) => (
-              <Link
+              <a
                 key={link.name}
-                to={link.href}
+                href={link.href}
                 className="text-black hover:text-black/70 transition-colors duration-200 text-sm tracking-wider"
               >
                 {link.name}
-              </Link>
+              </a>
             ))}
           </div>
 
@@ -43,13 +43,13 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center space-x-8">
             {rightLinks.map((link) => (
-              <Link
+              <a
                 key={link.name}
-                to={link.href}
+                href={link.href}
                 className="text-black hover:text-black/70 transition-colors duration-200 text-sm tracking-wider"
               >
                 {link.name}
-              </Link>
+              </a>
             ))}
           </div>
 

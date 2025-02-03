@@ -44,7 +44,7 @@ export default function HeroSection() {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div className="relative h-screen w-full overflow-hidden" id="home">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700 ease-in-out"
         style={{
