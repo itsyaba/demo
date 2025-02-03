@@ -173,7 +173,7 @@ export default function ContactSection() {
               </h3>
               <div className="space-y-2">
                 <div className="flex justify-between text-gray-600">
-                  <span className="text-md">Mon - sat</span>
+                  <span className="text-md">Mon - Sat</span>
                   <span className="text-md uppercase">09am - 03pm</span>
                 </div>
                 <hr className="my-4 bg-gray-600" />

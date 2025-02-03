@@ -17,7 +17,7 @@ import SocialGif from "../../../assets/social (2).gif";
 import StressGif from "../../../assets/stress (2).gif";
 // I'm not being racist
 import black_women from "../../../assets/black_women.jpg";
-import { Button } from "@/components/ui/moving-border";
+// import { Button } from "@/components/ui/moving-border";
 export default function ServicesSection() {
   const services = [
     {
@@ -185,14 +185,20 @@ export default function ServicesSection() {
 
             {/* Central Image */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-28 h-28 sm:w-20 sm:h-20 lg:w-44 lg:h-44 z-10 ">
-              <div className=" absolute -top-12 rounded-lg text-center left-0 right-0 lg:-right-4 lg:-left-4">
-                <Button
+              <div className=" absolute -top-14 -skew-y-12 rounded-lg text-center left-0 right-0 bg-white shadow-2xl p-2 ">
+                {/* <Button
                   borderRadius="0.2rem"
-                  className="text-xs md:text-base lg:text-md py-2  flex flex-col items-center  bg-white text-black shadow-2xl border-none font-poppins "
+                  className="text-xs md:text-base lg:text-md flex flex-col items-center  bg-white text-black shadow-2xl border-none font-poppins py-8 "
+                  as="div"
+                  duration={6500}
                 >
-                  <span className="block font-extrabold">10+</span>
+                  <span className="block font-extrabold ">10+</span>
                   services we provide
-                </Button>
+                </Button> */}
+                <h2 className="text-xs md:text-base  whitespace-wrap skew-y-0">
+                  <span className="block font-extrabold text-lg">10+</span>
+                  services we provide
+                </h2>
               </div>
               {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-900 text-white px-6 py-1  rounded-lg z-20 w-1/2">
                 <p className="text-sm sm:text-base lg:text-lg font-semibold whitespace-wrap text-center ">

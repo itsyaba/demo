@@ -1,10 +1,10 @@
-import { Facebook, Twitter, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Instagram, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Logo from "@/assets/logo.jpg";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
-  const footerLinks = ["Home", "About", "Contact", "Services", "Projects", "FAQ", "Testimonials"];
+  const footerLinks = ["Home", "About", "Contact", "Services", "Projects", "Testimonials"];
 
   return (
     <footer className="bg-blueC text-white pt-16 pb-8 font-poppins">
@@ -27,7 +27,7 @@ export default function Footer() {
               </h3>
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="text-sm">Mon - sat</span>
+                  <span className="text-sm">Mon - Sat</span>
                   <span className="text-sm uppercase">09am - 03pm</span>
                 </div>
                 <hr className="my-4 bg-gray-600" />
@@ -93,14 +93,8 @@ export default function Footer() {
             </div>
 
             <div className="mt-8">
-              <h3 className="text-xl font-semibold mb-4">Social links</h3>
+              <h3 className="text-xl font-semibold mb-4">Social link</h3>
               <div className="flex gap-4">
-                <a href="#" className="hover:text-yellowC transition-colors">
-                  <Facebook className="w-5 h-5" />
-                </a>
-                <a href="#" className="hover:text-yellowC transition-colors">
-                  <Twitter className="w-5 h-5" />
-                </a>
                 <a href="#" className="hover:text-yellowC transition-colors">
                   <Instagram className="w-5 h-5" />
                 </a>
