@@ -66,9 +66,11 @@ export default function Footer() {
             <div className="space-y-4">
               <p className="text-2xl font-bold text-yellowC"> 443-695-7696</p>
               <p className="text-sm">Our online scheduling and payment system is safe.</p>
-              <Button className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 transition-all">
-                REQUEST WITH AN ONLINE FORM
-              </Button>
+              <a href="#contact" className="mt-4">
+                <Button className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 transition-all">
+                  REQUEST WITH AN ONLINE FORM
+                </Button>
+              </a>
             </div>
           </div>
 
@@ -88,14 +90,18 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-yellowC" />
-                <p className="text-sm">Email: services@themojoeffect.com</p>
+                <p className="text-sm">Email: info@themojoeffect.com</p>
               </div>
             </div>
 
             <div className="mt-8">
               <h3 className="text-xl font-semibold mb-4">Social link</h3>
               <div className="flex gap-4">
-                <a href="#" className="hover:text-yellowC transition-colors">
+                <a
+                  href="https://www.instagram.com/tmethemojoeffect?igsh=MW9hYW1vczExNmF2eA=="
+                  target="_blank"
+                  className="hover:text-yellowC transition-colors"
+                >
                   <Instagram className="w-5 h-5" />
                 </a>
               </div>
@@ -105,7 +111,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-16 pt-8 border-t border-blue-800 text-center text-sm">
-          <p>Designed by conquer agency © The Mojo Effect. All Rights Reserved</p>
+          <p>Designed by Nileode Technologies © The Mojo Effect. All Rights Reserved</p>
         </div>
       </div>
     </footer>
