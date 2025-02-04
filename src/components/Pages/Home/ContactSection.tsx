@@ -8,6 +8,7 @@ import { Form, FormControl, FormField, FormItem, FormMessage } from "@/component
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import emailjs from "emailjs-com";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -17,7 +18,7 @@ const formSchema = z.object({
 });
 
 export default function ContactSection() {
-  const [isSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -28,7 +29,24 @@ export default function ContactSection() {
     },
   });
 
-  async function onSubmit() {}
+  async function onSubmit(data: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+
+    const serviceID = "service_nc6zvsa"; 
+    const templateID = "template_719uh5d";
+    const userID = "atkoIvKSPAVeQsWDv"; 
+
+    try {
+      await emailjs.send(serviceID, templateID, data, userID);
+      alert("Message sent successfully!");
+      form.reset();
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Failed to send message.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
 
   return (
     <section className="w-full py-20 overflow-hidden relative" id="contact">
