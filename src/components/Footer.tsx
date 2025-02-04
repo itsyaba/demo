@@ -1,4 +1,4 @@
-import { Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Instagram, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Logo from "@/assets/logo.jpg";
 import { Link } from "react-router-dom";
@@ -79,11 +79,7 @@ export default function Footer() {
               <span className="line"></span>
               Contact Info
             </h3>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-yellowC flex-shrink-0" />
-                <p className="text-sm">Address : Street</p>
-              </div>
+            <div className="space-y-4">   
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-yellowC" />
                 <p className="text-sm">Phone : 443-695-7696</p>
@@ -111,7 +107,13 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-16 pt-8 border-t border-blue-800 text-center text-sm">
-          <p>Designed by Nileode Technologies © The Mojo Effect. All Rights Reserved</p>
+         <p>
+            Designed by{" "}
+            <a href="https://Nileode.com" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
+              Nileode Technologies
+            </a>{" "}
+            © The Mojo Effect. All Rights Reserved
+</p>
         </div>
       </div>
     </footer>
