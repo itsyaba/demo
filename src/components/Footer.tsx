@@ -28,7 +28,7 @@ export default function Footer() {
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span className="text-sm">Mon - Sat</span>
-                  <span className="text-sm uppercase">9am - 3pm</span>
+                  <span className="text-sm uppercase">9am - 3AM</span>
                 </div>
                 <hr className="my-4 bg-gray-600" />
                 <div className="flex justify-between">
