@@ -2,6 +2,27 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Compare } from "@/components/ui/compare";
 
+import entranceWay from "@/assets/mojo/Entrance-way-before.jpeg";
+import entranceWayAfter from "@/assets/mojo/Entrance-way-after.jpeg";
+import closet from "@/assets/mojo/closet-before-scaled.jpg";
+import closetAfter from "@/assets/mojo/closet-after-scaled.jpg";
+import drawer from "@/assets/mojo/cluttered-drawer-before.jpg";
+import drawerAfter from "@/assets/mojo/decluttered-drawer-after.jpg";
+import bathroom from "@/assets/mojo/Messy-bathroom-cabinet.jpeg";
+import bathroomAfter from "@/assets/mojo/decluttered-bathroom-cabinet.jpeg";
+import dresser from "@/assets/mojo/cluttered-dresser-before-scaled.jpg";
+import dresserAfter from "@/assets/mojo/decluttered-dresser-after-scaled.jpg";
+import kitchen from "@/assets/mojo/Cluttered-kitchen-pantry.jpeg";
+import kitchenAfter from "@/assets/mojo/deCluttered-kitchen-pantry.jpeg";
+import kitchenOrg from "@/assets/mojo/IMG-20221028-WA0013.jpg";
+import kitchenOrgAfter from "@/assets/mojo/IMG-20221028-WA0015.jpg";
+import work from "@/assets/mojo/20230116_171203-scaled.jpg";
+import workAfter from "@/assets/mojo/IMG_20230116_1822341.jpg";
+import workplace from "@/assets/mojo/work-area-before-scaled.jpg";
+import workplaceAfter from "@/assets/mojo/work-area-after-scaled.jpg";
+import mens from "@/assets/mojo/mens-closet.jpg";
+import mensAfter from "@/assets/mojo/WhatsApp-Image-2023-02-23-at-5.32.53-PM.jpeg";
+
 const categories = [
   { id: "all", label: "ALL" },
   { id: "closets", label: "Closets and Garages" },
@@ -13,68 +34,73 @@ const categories = [
 const projects = [
   {
     id: 1,
-    image: "https://themojoeffect.com/wp-content/uploads/2023/03/Entrance-way-before.jpeg",
-    after: "https://themojoeffect.com/wp-content/uploads/2023/03/Entrance-way-after.jpeg",
+    image: entranceWay,
+    after: entranceWayAfter,
     category: "landing",
     alt: "landing",
   },
   {
     id: 2,
-    image: "https://themojoeffect.com/wp-content/uploads/2023/03/closet-after-scaled.jpg",
-    after: "https://themojoeffect.com/wp-content/uploads/2023/03/closet-before-scaled.jpg",
+    image: closetAfter,
+    after: closet,
     category: "closets",
     alt: "Organizing clothes and charity boxes",
   },
   {
     id: 3,
-    image: "https://themojoeffect.com/wp-content/uploads/2023/01/cluttered-drawer-before.jpg",
-    after: "https://themojoeffect.com/wp-content/uploads/2023/01/decluttered-drawer-after.jpg",
+    image: drawer,
+    after: drawerAfter,
     category: "closets",
     alt: "Organizing clothes and charity boxes",
   },
   {
     id: 4,
-    image: "https://themojoeffect.com/wp-content/uploads/2023/01/Messy-bathroom-cabinet.jpeg",
-    after: "https://themojoeffect.com/wp-content/uploads/2023/01/decluttered-bathroom-cabinet.jpeg",
+    image: bathroom,
+    after: bathroomAfter,
     category: "closets",
     alt: "Organizing clothes and charity boxes",
   },
   {
     id: 5,
-    image:
-      "https://themojoeffect.com/wp-content/uploads/2023/01/cluttered-dresser-before-scaled.jpg",
-    after:
-      "https://themojoeffect.com/wp-content/uploads/2023/01/decluttered-dresser-after-scaled.jpg",
+    image: dresser,
+    after: dresserAfter,
     category: "closets",
     alt: "Organizing clothes and charity boxes",
   },
   {
     id: 6,
-    image: "https://themojoeffect.com/wp-content/uploads/2023/01/Cluttered-kitchen-pantry.jpeg",
-    after: "https://themojoeffect.com/wp-content/uploads/2023/01/deCluttered-kitchen-pantry.jpeg",
+    image: kitchen,
+    after: kitchenAfter,
     category: "food",
     alt: "Food pantry",
   },
   {
     id: 7,
-    image: "https://themojoeffect.com/wp-content/uploads/2023/01/Unorganized-kitchen-cabinet.jpeg",
-    after: "https://themojoeffect.com/wp-content/uploads/2023/01/organized-kitchen-cabinet.jpeg",
+    image: kitchenOrg,
+    after: kitchenOrgAfter,
     category: "food",
     alt: "Food pantry",
   },
   {
     id: 8,
-    image: "https://themojoeffect.com/wp-content/uploads/2023/01/20230116_171203-scaled.jpg",
-    after: "https://themojoeffect.com/wp-content/uploads/2023/01/IMG_20230116_1822341.jpg",
+    image: work,
+    after: workAfter,
     category: "work",
     alt: "Organized workspace with laptop",
   },
   {
     id: 9,
-    image: "https://themojoeffect.com/wp-content/uploads/2023/01/IMG-20221028-WA0013.jpg",
-    after: "https://themojoeffect.com/wp-content/uploads/2023/01/IMG-20221028-WA0015.jpg",
+    image: workplace,
+    after: workplaceAfter,
     category: "work",
     alt: "Organized workspace with laptop",
+  },
+  {
+    id: 11,
+    image: mens,
+    after: mensAfter,
+    category: "food",
+    alt: "Organized room",
   },
 ];
 
@@ -122,8 +148,8 @@ const ProjectSection = () => {
               <Compare
                 firstImage={project.image}
                 secondImage={project.after}
-                firstImageClassName="object-cover object-left-center "
-                secondImageClassname="object-cover object-left-center"
+                firstImageClassName="object-cover  "
+                secondImageClassname="object-cover "
                 className="transition-transform duration-300 group-hover:scale-110"
                 slideMode="hover"
               />
